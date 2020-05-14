@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/neurodata/mvlearn/releases/download/{{ version }}-torch/{{ name }}-{{ version }}.tar.gz
-  sha256: 6a95779b4695ef532ba256e93368dcb19f96556f189599a20a69e8a7dc4d4643
+  sha256: 4c9d79cb5fedd4afa9240462b8e66e02a583d3719535e1759861d2474d002b68
 
 build:
   noarch: python
