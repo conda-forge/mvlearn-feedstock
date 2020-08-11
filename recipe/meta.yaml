@@ -1,5 +1,5 @@
 {% set name = "mvlearn" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/neurodata/mvlearn/releases/download/{{ version }}-torch/{{ name }}-{{ version }}.tar.gz
-  sha256: 4c9d79cb5fedd4afa9240462b8e66e02a583d3719535e1759861d2474d002b68
+  sha256: aec6c2cd6773c41d6ad9b66b82330b08a61e334f7cd0ccbea0866d00a610fefb
 
 build:
   noarch: python
@@ -30,14 +30,15 @@ requirements:
     - seaborn >=0.9.0
     - pytorch >=1.1.0
     - tqdm
+    - python-picard >=0.4
     - joblib >=0.11
 
 test:
   imports:
     - mvlearn
-    - mvlearn.factorization
     - mvlearn.cluster
-    - mvlearn.cotraining
+    - mvlearn.decomposition
+    - mvlearn.semi_supervised
     - mvlearn.construct
     - mvlearn.datasets
     - mvlearn.embed
