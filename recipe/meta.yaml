@@ -36,7 +36,6 @@ requirements:
 test:
   imports:
     - mvlearn
-    - mvlearn.factorization
     - mvlearn.cluster
     - mvlearn.decomposition
     - mvlearn.semi_supervised
