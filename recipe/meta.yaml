@@ -31,10 +31,12 @@ requirements:
     - pytorch >=1.1.0
     - tqdm
     - python-picard >=0.4
+    - joblib >=0.11
 
 test:
   imports:
     - mvlearn
+    - mvlearn.factorization
     - mvlearn.cluster
     - mvlearn.decomposition
     - mvlearn.semi_supervised
