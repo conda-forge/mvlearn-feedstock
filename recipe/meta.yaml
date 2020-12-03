@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mvlearn/mvlearn/releases/download/{{ version }}-conda/{{ name }}-{{ version }}.tar.gz
-  sha256: 4a4f835704abcc19602f4c71997daafd8a0440f12644bdcfe19064c5d67e4589
+  sha256: 70ac4f459c9a2febfd0bfa8c918de80d9a7b6e194d539a7275a2ca880515c5f5
 
 build:
   noarch: python
