@@ -1,13 +1,13 @@
 {% set name = "mvlearn" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/neurodata/mvlearn/releases/download/{{ version }}-torch/{{ name }}-{{ version }}.tar.gz
-  sha256: aec6c2cd6773c41d6ad9b66b82330b08a61e334f7cd0ccbea0866d00a610fefb
+  url: https://github.com/mvlearn/mvlearn/releases/download/{{ version }}-conda/{{ name }}-{{ version }}.tar.gz
+  sha256: 4a4f835704abcc19602f4c71997daafd8a0440f12644bdcfe19064c5d67e4589
 
 build:
   noarch: python
@@ -37,17 +37,18 @@ test:
   imports:
     - mvlearn
     - mvlearn.cluster
-    - mvlearn.decomposition
-    - mvlearn.semi_supervised
-    - mvlearn.construct
+    - mvlearn.compose
     - mvlearn.datasets
+    - mvlearn.decomposition
     - mvlearn.embed
+    - mvlearn.model_selection
     - mvlearn.plotting
+    - mvlearn.semi_supervised
     - mvlearn.utils
 
 about:
-  home: https://mvlearn.neurodata.io/
-  license: Apache-2.0
+  home: https://mvlearn.github.io/
+  license: MIT
   license_file: LICENSE
   summary: 'A python package for multi-view machine learning'
   description: |
@@ -55,10 +56,10 @@ about:
     a comprehensive, tested, and well-documented collection of multi-view
     learning tools, enabling anyone to readily access and apply such
     methods to their data.
-  doc_url: https://mvlearn.neurodata.io/
-  dev_url: https://github.com/neurodata/mvlearn
+  doc_url: https://mvlearn.github.io/
+  dev_url: https://github.com/mvlearn/mvlearn
 
 extra:
   recipe-maintainers:
-    - gmischl1
+    - gavinmischler
     - rflperry
