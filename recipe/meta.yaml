@@ -1,13 +1,13 @@
 {% set name = "mvlearn" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/neurodata/mvlearn/releases/download/{{ version }}-torch/{{ name }}-{{ version }}.tar.gz
-  sha256: aec6c2cd6773c41d6ad9b66b82330b08a61e334f7cd0ccbea0866d00a610fefb
+  url: https://github.com/mvlearn/mvlearn/releases/download/{{ version }}-conda/{{ name }}-{{ version }}.tar.gz
+  sha256: 70ac4f459c9a2febfd0bfa8c918de80d9a7b6e194d539a7275a2ca880515c5f5
 
 build:
   noarch: python
@@ -24,9 +24,8 @@ requirements:
     - graspy >=0.1.1
     - matplotlib-base >=3.0.0
     - numpy >=1.17.0
-    - pandas >=0.25.0
     - scikit-learn >=0.19.1
-    - scipy >=1.1.0
+    - scipy >=1.4.0
     - seaborn >=0.9.0
     - pytorch >=1.1.0
     - tqdm
@@ -37,28 +36,35 @@ test:
   imports:
     - mvlearn
     - mvlearn.cluster
-    - mvlearn.decomposition
-    - mvlearn.semi_supervised
-    - mvlearn.construct
+    - mvlearn.compose
     - mvlearn.datasets
+    - mvlearn.decomposition
     - mvlearn.embed
+    - mvlearn.model_selection
     - mvlearn.plotting
+    - mvlearn.semi_supervised
     - mvlearn.utils
 
 about:
-  home: https://mvlearn.neurodata.io/
-  license: Apache-2.0
+  home: https://mvlearn.github.io/
+  license: MIT
   license_file: LICENSE
-  summary: 'A python package for multi-view machine learning'
+  summary: 'A python package for multiview machine learning'
   description: |
-    mvlearn is a python package for multi-view machine learning. It offers
-    a comprehensive, tested, and well-documented collection of multi-view
-    learning tools, enabling anyone to readily access and apply such
-    methods to their data.
-  doc_url: https://mvlearn.neurodata.io/
-  dev_url: https://github.com/neurodata/mvlearn
+    mvlearn aims to serve as a community-driven open-source software package
+    that offers reference implementations for algorithms and methods related
+    to multiview learning (machine learning in settings where there are
+    multiple incommensurate views or feature sets for each sample). It brings
+    together the most widely-used tools in this setting with a standardized
+    scikit-learn like API, well tested code and high-quality documentation.
+    Doing so, we aim to facilitate application, extension, and comparison of
+    methods, and offer a foundation for research into new multiview algorithms.
+    We welcome new contributors and the addition of methods with proven
+    efficacy and current use.
+  doc_url: https://mvlearn.github.io/
+  dev_url: https://github.com/mvlearn/mvlearn
 
 extra:
   recipe-maintainers:
-    - gmischl1
+    - gavinmischler
     - rflperry

@@ -1,18 +1,28 @@
 About mvlearn
 =============
 
-Home: https://mvlearn.neurodata.io/
+Home: https://mvlearn.github.io/
 
-Package license: Apache-2.0
+Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mvlearn-feedstock/blob/master/LICENSE.txt)
 
-Summary: A python package for multi-view machine learning
+Summary: A python package for multiview machine learning
 
-mvlearn is a python package for multi-view machine learning. It offers
-a comprehensive, tested, and well-documented collection of multi-view
-learning tools, enabling anyone to readily access and apply such
-methods to their data.
+Development: https://github.com/mvlearn/mvlearn
+
+Documentation: https://mvlearn.github.io/
+
+mvlearn aims to serve as a community-driven open-source software package
+that offers reference implementations for algorithms and methods related
+to multiview learning (machine learning in settings where there are
+multiple incommensurate views or feature sets for each sample). It brings
+together the most widely-used tools in this setting with a standardized
+scikit-learn like API, well tested code and high-quality documentation.
+Doing so, we aim to facilitate application, extension, and comparison of
+methods, and offer a foundation for research into new multiview algorithms.
+We welcome new contributors and the addition of methods with proven
+efficacy and current use.
 
 
 Current build status
@@ -120,6 +130,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@gmischl1](https://github.com/gmischl1/)
+* [@gavinmischler](https://github.com/gavinmischler/)
 * [@rflperry](https://github.com/rflperry/)
 
