@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: 
     "{{ PYTHON }} -m pip install . -vv"
 
@@ -24,7 +24,7 @@ requirements:
     - graspy >=0.1.1
     - matplotlib-base >=3.0.0
     - numpy >=1.17.0
-    - scikit-learn >=0.19.1
+    - scikit-learn >=0.19.1, <0.24.0 # until graspy updated to fix old sklearn.mixture.gaussian_mixture dep
     - scipy >=1.4.0
     - seaborn >=0.9.0
     - pytorch >=1.1.0
