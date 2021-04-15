@@ -40,7 +40,6 @@ test:
     - mvlearn.datasets
     - mvlearn.decomposition
     - mvlearn.embed
-    - mvlearn.embed.CCA
     - mvlearn.model_selection
     - mvlearn.plotting
     - mvlearn.semi_supervised
