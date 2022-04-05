@@ -1,5 +1,5 @@
 {% set name = "mvlearn" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/mvlearn/mvlearn/releases/download/{{ version }}-conda/{{ name }}-{{ version }}.tar.gz
-  sha256: 70ac4f459c9a2febfd0bfa8c918de80d9a7b6e194d539a7275a2ca880515c5f5
+  sha256: 3ed28b7e8c4f5f76a8d52b6d8aac7bc10f75fd220e0314052b241d84083f25ef
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: 
     "{{ PYTHON }} -m pip install . -vv"
 
@@ -21,15 +21,11 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - graspy >=0.1.1
     - matplotlib-base >=3.0.0
     - numpy >=1.17.0
-    - scikit-learn >=0.19.1, <0.24.0 # until graspy updated to fix old sklearn.mixture.gaussian_mixture dep
-    - scipy >=1.4.0
+    - scikit-learn >=0.19.1
+    - scipy >=1.5.0
     - seaborn >=0.9.0
-    - pytorch >=1.1.0
-    - tqdm
-    - python-picard >=0.4
     - joblib >=0.11
 
 test:
