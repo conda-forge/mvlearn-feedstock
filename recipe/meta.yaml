@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: 
     "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - matplotlib-base >=3.0.0
     - numpy >=1.17.0
     - scikit-learn >=0.19.1
@@ -29,6 +29,8 @@ requirements:
     - joblib >=0.11
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - mvlearn
     - mvlearn.cluster
